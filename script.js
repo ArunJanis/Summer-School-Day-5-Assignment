@@ -42,8 +42,8 @@ console.log("In JavaScript, variables declared with var are hoisted to the top o
 
 console.log("\n=== Part 3: User Greeting - (Conditionals) ===");
 
-let userName = prompt("Part 3: Enter your name:");
-let userAge = parseInt(prompt("Part 3: Enter your age:"));
+let userName = prompt(" Enter NAME below:");
+let userAge = parseInt(prompt(" Enter AGE below:"));
 
 if (userAge < 18) {
   alert(`Hey ${userName}, you're a teen!`);
@@ -164,27 +164,31 @@ processNum3(5, function(n) {
 
 console.log("\n=== BONUS: Simple Calculator ===");
 
-let num1 = parseFloat(prompt("BONUS: Enter first number:"));
-let num2 = parseFloat(prompt("BONUS: Enter second number:"));
-let operation = prompt("BONUS: Choose operation: add, sub, mul, div");
+let num1 = parseFloat(prompt("CALC: Enter first number:"));
+let num2 = parseFloat(prompt("CALC: Enter second number:"));
+let operation = prompt("CALC: Choose operation: add (+), sub (-), mul (*), div (/)");
 
 let result;
 
 switch (operation) {
-  case "add":
+  case "add" :
+  case "+" :
     result = num1 + num2;
     break;
   case "sub":
+  case "-" :
     result = num1 - num2;
     break;
   case "mul":
+  case "*" :
     result = num1 * num2;
     break;
   case "div":
+  case "/" :
     result = num1 / num2;
     break;
   default:
-    alert("Invalid operation");
+    alert("Invalid operator");
 }
 
 if (result !== undefined) {
